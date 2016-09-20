@@ -134,7 +134,7 @@ namespace ID3Utils
                                 {
                                     count++;
                                     numero = count.ToString().PadLeft(max.ToString().Length, '0') + " ";
-                                    nome = numero;
+                                    nome = tagReal.Track.Value.ToString() != "0" && tagReal.Track.Value.ToString() != "" ? tagReal.Track.Value.ToString().PadLeft(max.ToString().Length, '0') + " " : numero;
                                 }
 
                                 separador = cmbSeparador.SelectedItem.ToString() != "" ? cmbSeparador.SelectedItem.ToString() : " - ";
